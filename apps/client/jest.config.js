@@ -18,6 +18,6 @@ module.exports = {
     'jest-preset-angular/build/serializers/html-comment',
   ],
   moduleNameMapper: {
-    "@jest-nx-build-dependencies/lib1": "<rootDir>/../../dist/libs/lib1/esm2015/index.js"
+    "@jest-nx-build-dependencies/lib1": "<rootDir>/../../dist/libs/lib1/bundles/jest-nx-build-dependencies-lib1.umd.js"
   }
 };

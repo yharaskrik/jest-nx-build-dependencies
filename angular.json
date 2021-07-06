@@ -123,7 +123,7 @@
       "prefix": "jest-nx-build-dependencies",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:ng-packagr-lite",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "outputs": ["dist/libs/lib1"],
           "options": {
             "project": "libs/lib1/ng-package.json"
