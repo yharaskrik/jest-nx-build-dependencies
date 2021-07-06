@@ -1,10 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Lib1Module } from '@jest-nx-build-dependencies/lib1';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
+      imports: [
+        Lib1Module
+      ]
     }).compileComponents();
   });
 

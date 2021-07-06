@@ -17,4 +17,7 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
+  moduleNameMapper: {
+    "@jest-nx-build-dependencies/lib1": "<rootDir>/../../dist/libs/lib1/esm2015/index.js"
+  }
 };

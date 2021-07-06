@@ -122,6 +122,22 @@
       "sourceRoot": "libs/lib1/src",
       "prefix": "jest-nx-build-dependencies",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/lib1"],
+          "options": {
+            "project": "libs/lib1/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/lib1/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/lib1/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/lib1"],
