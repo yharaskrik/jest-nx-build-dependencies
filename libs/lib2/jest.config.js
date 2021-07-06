@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'client',
+  displayName: 'lib2',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/client',
+  coverageDirectory: '../../coverage/libs/lib2',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },
@@ -17,8 +17,4 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
-  moduleNameMapper: {
-    "@jest-nx-build-dependencies/lib1": "<rootDir>/../../dist/libs/lib1/bundles/jest-nx-build-dependencies-lib1.umd.js",
-    "@jest-nx-build-dependencies/lib2": "<rootDir>/../../dist/libs/lib2/esm2015/index.js"
-  }
 };
