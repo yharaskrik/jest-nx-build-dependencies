@@ -18,7 +18,11 @@ module.exports = {
     'jest-preset-angular/build/serializers/html-comment',
   ],
   moduleNameMapper: {
+    // uses ng packagr to bundle umd
     "@jest-nx-build-dependencies/lib1": "<rootDir>/../../dist/libs/lib1/bundles/jest-nx-build-dependencies-lib1.umd.js",
-    "@jest-nx-build-dependencies/lib2": "<rootDir>/../../dist/libs/lib2/esm2015/index.js"
+    // compiles to esnext and esm2015 which requires additional transpilation during testing
+    "@jest-nx-build-dependencies/lib2": "<rootDir>/../../dist/libs/lib2/esm2015/index.js",
+    // compiles to commonjs right away and can be used within the tests but is not optimal for builds
+    "@jest-nx-build-dependencies/lib3": "<rootDir>/../../dist/libs/lib2/esm2015/index.js",
   }
 };

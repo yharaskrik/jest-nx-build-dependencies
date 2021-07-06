@@ -197,6 +197,47 @@
           }
         }
       }
+    },
+    "lib3": {
+      "projectType": "library",
+      "root": "libs/lib3",
+      "sourceRoot": "libs/lib3/src",
+      "prefix": "jest-nx-build-dependencies",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/lib3"],
+          "options": {
+            "project": "libs/lib3/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/lib3/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/lib3/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lib3"],
+          "options": {
+            "jestConfig": "libs/lib3/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/lib3/src/**/*.ts",
+              "libs/lib3/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
